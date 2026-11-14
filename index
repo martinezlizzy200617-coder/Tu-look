@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu look | Descubre tu estilo</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffafc;
+      color: #29232a;
+    }
+
+    header {
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      border-bottom: 1px solid #f0e5eb;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+      color: #bd668b;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #443640;
+      font-size: 14px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 85px 20px;
+      background: #f8e8ef;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 65px);
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      margin-bottom: 28px;
+      color: #685661;
+    }
+
+    .button {
+      display: inline-block;
+      background: #bd668b;
+      color: white;
+      padding: 14px 27px;
+      border-radius: 30px;
+      text-decoration: none;
+    }
+
+    section { padding: 55px 7%; }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 29px;
+    }
+
+    .stores, .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 18px;
+    }
+
+    .item {
+      background: white;
+      padding: 28px 15px;
+      border-radius: 16px;
+      text-align: center;
+      border: 1px solid #f0e5eb;
+    }
+
+    .item h3 { margin-bottom: 10px; }
+
+    .item a {
+      color: #bd668b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px;
+      background: #f8e8ef;
+      color: #685661;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Tu look</div>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#categorias">Categorías</a>
+    <a href="#tiendas">Tiendas</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <h1>Encuentra tu próximo look</h1>
+    <p>Descubre moda, tendencias y prendas de tus tiendas favoritas.</p>
+    <a class="button" href="#tiendas">Descubrir tiendas</a>
+  </section>
+
+  <section id="categorias">
+    <h2>Explora tu estilo</h2>
+    <div class="categories">
+      <div class="item"><h3>👗 Mujer</h3><p>Moda y tendencias</p></div>
+      <div class="item"><h3>👕 Hombre</h3><p>Encuentra tu estilo</p></div>
+      <div class="item"><h3>👜 Accesorios</h3><p>Detalles que destacan</p></div>
+      <div class="item"><h3>👟 Calzado</h3><p>Completa tu look</p></div>
+    </div>
+  </section>
+
+  <section id="tiendas">
+    <h2>Tus tiendas favoritas</h2>
+    <div class="stores">
+      <div class="item">
+        <h3>Amazon</h3>
+        <a href="https://www.amazon.es/" target="_blank">Visitar tienda</a>
+      </div>
+      <div class="item">
+        <h3>SHEIN</h3>
+        <a href="https://es.shein.com/" target="_blank">Visitar tienda</a>
+      </div>
+      <div class="item">
+        <h3>ZARA</h3>
+        <a href="https://www.zara.com/es/" target="_blank">Visitar tienda</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 Tu look. Descubre, combina y encuentra tu estilo.</p>
+</footer>
+
+</body>
+</html>
