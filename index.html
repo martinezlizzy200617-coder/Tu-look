@@ -1,154 +1,415 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tu look | Descubre tu estilo</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu look | Tu estilo, tu esencia</title>
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #fffafc;
-      color: #29232a;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-    header {
-      padding: 22px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: white;
-      border-bottom: 1px solid #f0e5eb;
-    }
+<style>
+:root {
+  --pink: #c987a2;
+  --light-pink: #f8edf1;
+  --cream: #fffafc;
+  --dark: #382b32;
+  --gold: #bd9a73;
+  --white: #ffffff;
+}
 
-    .logo {
-      font-size: 30px;
-      font-weight: bold;
-      color: #bd668b;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #443640;
-      font-size: 14px;
-    }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+}
 
-    .hero {
-      text-align: center;
-      padding: 85px 20px;
-      background: #f8e8ef;
-    }
+header {
+  background: white;
+  padding: 20px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0e3e9;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-    .hero h1 {
-      font-size: clamp(38px, 7vw, 65px);
-      margin-bottom: 18px;
-    }
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: var(--pink);
+  font-weight: 700;
+}
 
-    .hero p {
-      font-size: 17px;
-      margin-bottom: 28px;
-      color: #685661;
-    }
+nav {
+  display: flex;
+  gap: 25px;
+}
 
-    .button {
-      display: inline-block;
-      background: #bd668b;
-      color: white;
-      padding: 14px 27px;
-      border-radius: 30px;
-      text-decoration: none;
-    }
+nav a {
+  text-decoration: none;
+  color: var(--dark);
+  font-size: 14px;
+  transition: color .3s;
+}
 
-    section { padding: 55px 7%; }
+nav a:hover {
+  color: var(--pink);
+}
 
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 29px;
-    }
+.hero {
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  background:
+    linear-gradient(rgba(255,250,252,.75), rgba(248,237,241,.88)),
+    url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600');
+  background-position: center;
+  background-size: cover;
+}
 
-    .stores, .categories {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 18px;
-    }
+.hero-content {
+  max-width: 750px;
+}
 
-    .item {
-      background: white;
-      padding: 28px 15px;
-      border-radius: 16px;
-      text-align: center;
-      border: 1px solid #f0e5eb;
-    }
+.eyebrow {
+  color: var(--pink);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
 
-    .item h3 { margin-bottom: 10px; }
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 1.1;
+  margin-bottom: 22px;
+}
 
-    .item a {
-      color: #bd668b;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.hero p {
+  color: #6e5964;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
 
-    footer {
-      text-align: center;
-      padding: 28px;
-      background: #f8e8ef;
-      color: #685661;
-    }
-  </style>
+.button {
+  display: inline-block;
+  padding: 15px 32px;
+  background: var(--pink);
+  color: white;
+  text-decoration: none;
+  border-radius: 40px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.button:hover {
+  background: #a96583;
+  transform: translateY(-3px);
+}
+
+section {
+  padding: 85px 7%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading p {
+  color: var(--pink);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 5vw, 43px);
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.category {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(80,40,60,.05);
+  transition: .3s;
+}
+
+.category:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(80,40,60,.12);
+}
+
+.category img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.category h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  padding: 18px 10px 5px;
+}
+
+.category p {
+  color: #8a7881;
+  font-size: 13px;
+  padding-bottom: 22px;
+}
+
+.stores-section {
+  background: var(--light-pink);
+}
+
+.stores {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.store {
+  background: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 18px;
+  border: 1px solid #f1dfe7;
+  transition: .3s;
+}
+
+.store:hover {
+  transform: translateY(-5px);
+}
+
+.store h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.store p {
+  color: #88747f;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.store a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: var(--pink);
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.about {
+  text-align: center;
+  max-width: 750px;
+  margin: auto;
+}
+
+.about p {
+  color: #796873;
+  line-height: 1.9;
+  margin-top: 20px;
+}
+
+footer {
+  background: #3d3037;
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+footer .logo {
+  margin-bottom: 12px;
+}
+
+footer p {
+  font-size: 13px;
+  color: #e5d4dc;
+  line-height: 1.8;
+}
+
+@media(max-width: 800px) {
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stores {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media(max-width: 450px) {
+  .category img {
+    height: 180px;
+  }
+
+  section {
+    padding: 60px 5%;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">Tu look</div>
+  <div class="logo">Tu look.</div>
+
   <nav>
     <a href="#inicio">Inicio</a>
     <a href="#categorias">Categorías</a>
     <a href="#tiendas">Tiendas</a>
+    <a href="#nosotros">Nosotros</a>
   </nav>
 </header>
 
 <main>
-  <section class="hero" id="inicio">
-    <h1>Encuentra tu próximo look</h1>
-    <p>Descubre moda, tendencias y prendas de tus tiendas favoritas.</p>
-    <a class="button" href="#tiendas">Descubrir tiendas</a>
-  </section>
 
-  <section id="categorias">
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <p class="eyebrow">Moda · Estilo · Inspiración</p>
+    <h1>Tu estilo comienza aquí</h1>
+    <p>
+      Descubre prendas, encuentra inspiración y crea
+      combinaciones que reflejen tu personalidad.
+    </p>
+    <a href="#tiendas" class="button">Descubrir moda</a>
+  </div>
+</section>
+
+<section id="categorias">
+  <div class="section-heading">
+    <p>Encuentra tu esencia</p>
     <h2>Explora tu estilo</h2>
-    <div class="categories">
-      <div class="item"><h3>👗 Mujer</h3><p>Moda y tendencias</p></div>
-      <div class="item"><h3>👕 Hombre</h3><p>Encuentra tu estilo</p></div>
-      <div class="item"><h3>👜 Accesorios</h3><p>Detalles que destacan</p></div>
-      <div class="item"><h3>👟 Calzado</h3><p>Completa tu look</p></div>
-    </div>
-  </section>
+  </div>
 
-  <section id="tiendas">
-    <h2>Tus tiendas favoritas</h2>
-    <div class="stores">
-      <div class="item">
-        <h3>Amazon</h3>
-        <a href="https://www.amazon.es/" target="_blank">Visitar tienda</a>
-      </div>
-      <div class="item">
-        <h3>SHEIN</h3>
-        <a href="https://es.shein.com/" target="_blank">Visitar tienda</a>
-      </div>
-      <div class="item">
-        <h3>ZARA</h3>
-        <a href="https://www.zara.com/es/" target="_blank">Visitar tienda</a>
-      </div>
+  <div class="categories">
+
+    <article class="category">
+      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="Moda femenina">
+      <h3>Mujer</h3>
+      <p>Elegancia y personalidad</p>
+    </article>
+
+    <article class="category">
+      <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?w=600" alt="Moda masculina">
+      <h3>Hombre</h3>
+      <p>Estilo para cada ocasión</p>
+    </article>
+
+    <article class="category">
+      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600" alt="Complementos de moda">
+      <h3>Accesorios</h3>
+      <p>Los detalles importan</p>
+    </article>
+
+    <article class="category">
+      <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600" alt="Calzado">
+      <h3>Calzado</h3>
+      <p>Completa tu look</p>
+    </article>
+
+  </div>
+</section>
+
+<section class="stores-section" id="tiendas">
+  <div class="section-heading">
+    <p>Compra e inspírate</p>
+    <h2>Nuestras tiendas</h2>
+  </div>
+
+  <div class="stores">
+
+    <article class="store">
+      <h3>Amazon</h3>
+      <p>Encuentra una gran variedad de moda y complementos.</p>
+      <a href="https://www.amazon.es/" target="_blank" rel="noopener noreferrer">Explorar Amazon</a>
+    </article>
+
+    <article class="store">
+      <h3>SHEIN</h3>
+      <p>Descubre tendencias y nuevas ideas para tus conjuntos.</p>
+      <a href="https://es.shein.com/" target="_blank" rel="noopener noreferrer">Explorar SHEIN</a>
+    </article>
+
+    <article class="store">
+      <h3>ZARA</h3>
+      <p>Encuentra inspiración en moda actual y sofisticada.</p>
+      <a href="https://www.zara.com/es/" target="_blank" rel="noopener noreferrer">Explorar ZARA</a>
+    </article>
+
+  </div>
+</section>
+
+<section id="nosotros">
+  <div class="about">
+    <div class="section-heading">
+      <p>Conoce nuestra esencia</p>
+      <h2>Bienvenida a Tu look</h2>
     </div>
-  </section>
+
+    <p>
+      Tu look nace para ayudarte a descubrir nuevas prendas,
+      explorar diferentes estilos y encontrar inspiración
+      en tus tiendas favoritas. Porque cada persona tiene
+      una esencia propia y cada look cuenta una historia.
+    </p>
+  </div>
+</section>
+
 </main>
 
 <footer>
-  <p>© 2026 Tu look. Descubre, combina y encuentra tu estilo.</p>
+  <div class="logo">Tu look.</div>
+  <p>Descubre · Combina · Encuentra tu estilo</p>
+  <p>© 2026 Tu look. Todos los derechos reservados.</p>
 </footer>
 
 </body>
