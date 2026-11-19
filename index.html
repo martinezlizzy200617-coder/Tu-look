@@ -1,297 +1,364 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tu look | Tu estilo, tu esencia</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --pink: #c987a2;
-  --light-pink: #f8edf1;
-  --cream: #fffafc;
-  --dark: #382b32;
-  --gold: #bd9a73;
-  --white: #ffffff;
+  --pink:#c987a2;
+  --light-pink:#f8edf1;
+  --cream:#fffafc;
+  --dark:#382b32;
+  --gold:#bd9a73;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--cream);
-  color: var(--dark);
+  font-family:'DM Sans',sans-serif;
+  background:var(--cream);
+  color:var(--dark);
 }
 
 header {
-  background: white;
-  padding: 20px 7%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #f0e3e9;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  background:white;
+  padding:18px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid #f0e3e9;
+  position:sticky;
+  top:0;
+  z-index:10;
 }
 
 .logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  color: var(--pink);
-  font-weight: 700;
+  font-family:'Playfair Display',serif;
+  font-size:32px;
+  color:var(--pink);
+  font-weight:700;
 }
 
 nav {
-  display: flex;
-  gap: 25px;
+  display:flex;
+  gap:25px;
 }
 
 nav a {
-  text-decoration: none;
-  color: var(--dark);
-  font-size: 14px;
-  transition: color .3s;
+  text-decoration:none;
+  color:var(--dark);
+  font-size:14px;
+  transition:color .3s;
 }
 
 nav a:hover {
-  color: var(--pink);
+  color:var(--pink);
 }
 
 .hero {
-  min-height: 560px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 80px 20px;
+  min-height:560px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:80px 20px;
   background:
-    linear-gradient(rgba(255,250,252,.75), rgba(248,237,241,.88)),
+    linear-gradient(rgba(255,250,252,.75),rgba(248,237,241,.88)),
     url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600');
-  background-position: center;
-  background-size: cover;
+  background-position:center;
+  background-size:cover;
 }
 
 .hero-content {
-  max-width: 750px;
+  max-width:750px;
 }
 
 .eyebrow {
-  color: var(--pink);
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 12px;
-  font-weight: 700;
-  margin-bottom: 20px;
+  color:var(--pink);
+  text-transform:uppercase;
+  letter-spacing:4px;
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:20px;
 }
 
 .hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(42px, 7vw, 76px);
-  line-height: 1.1;
-  margin-bottom: 22px;
+  font-family:'Playfair Display',serif;
+  font-size:clamp(42px,7vw,76px);
+  line-height:1.1;
+  margin-bottom:22px;
 }
 
 .hero p {
-  color: #6e5964;
-  font-size: 17px;
-  line-height: 1.8;
-  margin-bottom: 32px;
+  color:#6e5964;
+  font-size:17px;
+  line-height:1.8;
+  margin-bottom:32px;
 }
 
 .button {
-  display: inline-block;
-  padding: 15px 32px;
-  background: var(--pink);
-  color: white;
-  text-decoration: none;
-  border-radius: 40px;
-  font-weight: 600;
-  transition: .3s;
+  display:inline-block;
+  padding:15px 32px;
+  background:var(--pink);
+  color:white;
+  text-decoration:none;
+  border-radius:40px;
+  font-weight:600;
+  transition:.3s;
 }
 
 .button:hover {
-  background: #a96583;
-  transform: translateY(-3px);
+  background:#a96583;
+  transform:translateY(-3px);
 }
 
 section {
-  padding: 85px 7%;
+  padding:85px 7%;
 }
 
 .section-heading {
-  text-align: center;
-  margin-bottom: 45px;
+  text-align:center;
+  margin-bottom:45px;
 }
 
 .section-heading p {
-  color: var(--pink);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 700;
-  margin-bottom: 12px;
+  color:var(--pink);
+  letter-spacing:3px;
+  text-transform:uppercase;
+  font-size:11px;
+  font-weight:700;
+  margin-bottom:12px;
 }
 
 h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(30px, 5vw, 43px);
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,5vw,43px);
 }
 
 .categories {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
 }
 
 .category {
-  background: white;
-  border-radius: 16px;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 5px 25px rgba(80,40,60,.05);
-  transition: .3s;
+  background:white;
+  border-radius:16px;
+  overflow:hidden;
+  text-align:center;
+  box-shadow:0 5px 25px rgba(80,40,60,.05);
+  transition:.3s;
 }
 
 .category:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(80,40,60,.12);
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(80,40,60,.12);
 }
 
 .category img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
+  width:100%;
+  height:240px;
+  object-fit:cover;
 }
 
 .category h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 23px;
-  padding: 18px 10px 5px;
+  font-family:'Playfair Display',serif;
+  font-size:23px;
+  padding:18px 10px 5px;
 }
 
 .category p {
-  color: #8a7881;
-  font-size: 13px;
-  padding-bottom: 22px;
+  color:#8a7881;
+  font-size:13px;
+  padding-bottom:22px;
 }
 
 .stores-section {
-  background: var(--light-pink);
+  background:var(--light-pink);
 }
 
 .stores {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
 }
 
 .store {
-  background: white;
-  padding: 40px 20px;
-  text-align: center;
-  border-radius: 18px;
-  border: 1px solid #f1dfe7;
-  transition: .3s;
+  background:white;
+  padding:40px 20px;
+  text-align:center;
+  border-radius:18px;
+  border:1px solid #f1dfe7;
+  transition:.3s;
 }
 
 .store:hover {
-  transform: translateY(-5px);
+  transform:translateY(-5px);
 }
 
 .store h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 30px;
-  margin-bottom: 12px;
+  font-family:'Playfair Display',serif;
+  font-size:30px;
+  margin-bottom:12px;
 }
 
 .store p {
-  color: #88747f;
-  font-size: 14px;
-  margin-bottom: 25px;
+  color:#88747f;
+  font-size:14px;
+  margin-bottom:25px;
 }
 
 .store a {
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-  background: var(--pink);
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-size: 13px;
-  font-weight: 600;
+  display:inline-block;
+  text-decoration:none;
+  color:white;
+  background:var(--pink);
+  padding:12px 25px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:600;
+}
+
+.winter-section {
+  background:#fffafc;
+  color:var(--dark);
+}
+
+.winter-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.product {
+  background:white;
+  padding:25px;
+  border:1px solid #f1dfe7;
+  border-radius:15px;
+  text-align:center;
+  transition:.3s;
+}
+
+.product:hover {
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(80,40,60,.08);
+}
+
+.product .tag {
+  color:var(--gold);
+  font-size:12px;
+  margin-bottom:10px;
+}
+
+.product h3 {
+  font-family:'Playfair Display',serif;
+  font-size:21px;
+  margin-bottom:10px;
+}
+
+.product p {
+  color:#88747f;
+  font-size:14px;
+  line-height:1.6;
+  margin-bottom:20px;
+}
+
+.product a {
+  display:inline-block;
+  background:var(--pink);
+  color:white;
+  padding:12px 22px;
+  border-radius:25px;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.product a:hover {
+  background:#a96583;
+}
+
+.affiliate-note {
+  text-align:center;
+  color:#88747f;
+  font-size:12px;
+  margin-top:30px;
+  line-height:1.7;
 }
 
 .about {
-  text-align: center;
-  max-width: 750px;
-  margin: auto;
+  text-align:center;
+  max-width:750px;
+  margin:auto;
 }
 
 .about p {
-  color: #796873;
-  line-height: 1.9;
-  margin-top: 20px;
+  color:#796873;
+  line-height:1.9;
+  margin-top:20px;
 }
 
 footer {
-  background: #3d3037;
-  color: white;
-  text-align: center;
-  padding: 35px 20px;
+  background:#3d3037;
+  color:white;
+  text-align:center;
+  padding:35px 20px;
 }
 
 footer .logo {
-  margin-bottom: 12px;
+  margin-bottom:12px;
 }
 
 footer p {
-  font-size: 13px;
-  color: #e5d4dc;
-  line-height: 1.8;
+  font-size:13px;
+  color:#e5d4dc;
+  line-height:1.8;
 }
 
-@media(max-width: 800px) {
+@media(max-width:800px) {
   .categories {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:repeat(2,1fr);
   }
 
   .stores {
-    grid-template-columns: 1fr;
+    grid-template-columns:1fr;
   }
 
   header {
-    flex-direction: column;
-    gap: 15px;
+    flex-direction:column;
+    gap:15px;
   }
 
   nav {
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap:16px;
+    flex-wrap:wrap;
+    justify-content:center;
   }
 }
 
-@media(max-width: 450px) {
+@media(max-width:450px) {
   .category img {
-    height: 180px;
+    height:180px;
   }
 
   section {
-    padding: 60px 5%;
+    padding:60px 5%;
   }
 
   nav a {
-    font-size: 12px;
+    font-size:12px;
   }
 }
 </style>
@@ -301,11 +368,11 @@ footer p {
 
 <header>
   <div class="logo">Tu look.</div>
-
   <nav>
     <a href="#inicio">Inicio</a>
     <a href="#categorias">Categorías</a>
     <a href="#tiendas">Tiendas</a>
+    <a href="#invierno">Invierno</a>
     <a href="#nosotros">Nosotros</a>
   </nav>
 </header>
@@ -316,10 +383,7 @@ footer p {
   <div class="hero-content">
     <p class="eyebrow">Moda · Estilo · Inspiración</p>
     <h1>Tu estilo comienza aquí</h1>
-    <p>
-      Descubre prendas, encuentra inspiración y crea
-      combinaciones que reflejen tu personalidad.
-    </p>
+    <p>Descubre prendas, encuentra inspiración y crea combinaciones que reflejen tu personalidad.</p>
     <a href="#tiendas" class="button">Descubrir moda</a>
   </div>
 </section>
@@ -331,7 +395,6 @@ footer p {
   </div>
 
   <div class="categories">
-
     <article class="category">
       <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="Moda femenina">
       <h3>Mujer</h3>
@@ -355,7 +418,6 @@ footer p {
       <h3>Calzado</h3>
       <p>Completa tu look</p>
     </article>
-
   </div>
 </section>
 
@@ -366,7 +428,6 @@ footer p {
   </div>
 
   <div class="stores">
-
     <article class="store">
       <h3>Amazon</h3>
       <p>Encuentra una gran variedad de moda y complementos.</p>
@@ -384,8 +445,70 @@ footer p {
       <p>Encuentra inspiración en moda actual y sofisticada.</p>
       <a href="https://www.zara.com/es/" target="_blank" rel="noopener noreferrer">Explorar ZARA</a>
     </article>
+  </div>
+</section>
+
+<section class="winter-section" id="invierno">
+  <div class="section-heading">
+    <p>Selección especial</p>
+    <h2>Colección de invierno</h2>
+    <p style="text-transform:none;letter-spacing:0;font-weight:400;font-size:14px;margin-top:12px;">Descubre tus favoritos para esta temporada.</p>
+  </div>
+
+  <div class="winter-grid">
+
+    <article class="product">
+      <p class="tag">01 · CALZADO</p>
+      <h3>Botas altas arrugadas</h3>
+      <p>Botas de punta afilada y tacón grueso.</p>
+      <a href="https://onelink.shein.com/60/68asnk5g4jp2?ismg_ol=BLzjtxISlt4_01_KOC-C" target="_blank" rel="noopener noreferrer">Ver producto</a>
+    </article>
+
+    <article class="product">
+      <p class="tag">02 · VESTIDOS</p>
+      <h3>Vestido de cuadros</h3>
+      <p>Diseño de cuadros con cinturón.</p>
+      <a href="https://onelink.shein.com/60/68askdpnknqm?ismg_ol=G4uhmrTzvWu_01_KOC-C" target="_blank" rel="noopener noreferrer">Ver producto</a>
+    </article>
+
+    <article class="product">
+      <p class="tag">03 · MONOS</p>
+      <h3>Mono de manga larga</h3>
+      <p>Mono de punto texturizado y corte ajustado.</p>
+      <a href="https://onelink.shein.com/60/68asf2bnoqo5?ismg_ol=DrB5T32911M_01_KOC-C" target="_blank" rel="noopener noreferrer">Ver producto</a>
+    </article>
+
+    <article class="product">
+      <p class="tag">04 · VESTIDOS</p>
+      <h3>Vestido de terciopelo</h3>
+      <p>Vestido elegante de manga larga con abertura.</p>
+      <a href="https://onelink.shein.com/60/68ascbo40li1?ismg_ol=7sAFCRFtleS_01_KOC-C" target="_blank" rel="noopener noreferrer">Ver producto</a>
+    </article>
+
+    <article class="product">
+      <p class="tag">05 · VESTIDOS</p>
+      <h3>Vestido suéter gris</h3>
+      <p>Vestido corto de punto con hombros descubiertos.</p>
+      <a href="https://onelink.shein.com/60/68asagl26qa0?ismg_ol=5Qp9XVJwxuw_01_KOC-C" target="_blank" rel="noopener noreferrer">Ver producto</a>
+    </article>
+
+    <article class="product">
+      <p class="tag">06 · COMPLEMENTOS</p>
+      <h3>Medias térmicas negras</h3>
+      <p>Medias cálidas para los días fríos.</p>
+      <a href="https://onelink.shein.com/60/68as8pg2kz2a?ismg_ol=EZphXsHRICl_01_KOC-C" target="_blank" rel="noopener noreferrer">Ver producto</a>
+    </article>
+
+    <article class="product">
+      <p class="tag">07 · VESTIDOS</p>
+      <h3>Vestido midi crema</h3>
+      <p>Vestido de manga larga y cuello asimétrico.</p>
+      <a href="https://onelink.shein.com/60/68as6clqrbfn?ismg_ol=C0Ygkj4snXZ_01_KOC-C" target="_blank" rel="noopener noreferrer">Ver producto</a>
+    </article>
 
   </div>
+
+  <p class="affiliate-note">Algunos enlaces son de afiliada. Tu look podría recibir una comisión si realizas una compra, sin coste adicional para ti.</p>
 </section>
 
 <section id="nosotros">
@@ -395,12 +518,7 @@ footer p {
       <h2>Bienvenida a Tu look</h2>
     </div>
 
-    <p>
-      Tu look nace para ayudarte a descubrir nuevas prendas,
-      explorar diferentes estilos y encontrar inspiración
-      en tus tiendas favoritas. Porque cada persona tiene
-      una esencia propia y cada look cuenta una historia.
-    </p>
+    <p>Tu look nace para ayudarte a descubrir nuevas prendas, explorar diferentes estilos y encontrar inspiración en tus tiendas favoritas. Porque cada persona tiene una esencia propia y cada look cuenta una historia.</p>
   </div>
 </section>
 
@@ -412,69 +530,5 @@ footer p {
   <p>© 2026 Tu look. Todos los derechos reservados.</p>
 </footer>
 
-
-
-<section id="invierno" style="background:#fffafc;padding:65px 6%;font-family:'DM Sans',sans-serif;color:#382b32;">
-  <div style="text-align:center;margin-bottom:35px;">
-    <p style="color:#c987a2;letter-spacing:3px;font-size:12px;">SELECCIÓN ESPECIAL</p>
-    <h2 style="font-family:'Playfair Display',serif;font-size:36px;margin-top:12px;">Colección de invierno</h2>
-    <p style="color:#88747f;margin-top:12px;">Descubre tus favoritos para esta temporada.</p>
-  </div>
-
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1100px;margin:auto;">
-
-    <article style="background:white;padding:25px;border:1px solid #f1dfe7;border-radius:15px;text-align:center;">
-      <p style="color:#bd9a73;font-size:12px;">01 · CALZADO</p>
-      <h3>Botas altas arrugadas</h3>
-      <p>Botas de punta afilada y tacón grueso.</p>
-      <a href="https://onelink.shein.com/60/68asnk5g4jp2?ismg_ol=BLzjtxISlt4_01_KOC-C" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#c987a2;color:white;padding:12px 22px;border-radius:25px;text-decoration:none;">Ver producto</a>
-    </article>
-
-    <article style="background:white;padding:25px;border:1px solid #f1dfe7;border-radius:15px;text-align:center;">
-      <p style="color:#bd9a73;font-size:12px;">02 · VESTIDOS</p>
-      <h3>Vestido de cuadros</h3>
-      <p>Diseño de cuadros con cinturón.</p>
-      <a href="https://onelink.shein.com/60/68askdpnknqm?ismg_ol=G4uhmrTzvWu_01_KOC-C" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#c987a2;color:white;padding:12px 22px;border-radius:25px;text-decoration:none;">Ver producto</a>
-    </article>
-
-    <article style="background:white;padding:25px;border:1px solid #f1dfe7;border-radius:15px;text-align:center;">
-      <p style="color:#bd9a73;font-size:12px;">03 · MONOS</p>
-      <h3>Mono de manga larga</h3>
-      <p>Mono de punto texturizado y corte ajustado.</p>
-      <a href="https://onelink.shein.com/60/68asf2bnoqo5?ismg_ol=DrB5T32911M_01_KOC-C" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#c987a2;color:white;padding:12px 22px;border-radius:25px;text-decoration:none;">Ver producto</a>
-    </article>
-
-    <article style="background:white;padding:25px;border:1px solid #f1dfe7;border-radius:15px;text-align:center;">
-      <p style="color:#bd9a73;font-size:12px;">04 · VESTIDOS</p>
-      <h3>Vestido de terciopelo</h3>
-      <p>Vestido elegante de manga larga con abertura.</p>
-      <a href="https://onelink.shein.com/60/68ascbo40li1?ismg_ol=7sAFCRFtleS_01_KOC-C" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#c987a2;color:white;padding:12px 22px;border-radius:25px;text-decoration:none;">Ver producto</a>
-    </article>
-
-    <article style="background:white;padding:25px;border:1px solid #f1dfe7;border-radius:15px;text-align:center;">
-      <p style="color:#bd9a73;font-size:12px;">05 · VESTIDOS</p>
-      <h3>Vestido suéter gris</h3>
-      <p>Vestido corto de punto con hombros descubiertos.</p>
-      <a href="https://onelink.shein.com/60/68asagl26qa0?ismg_ol=5Qp9XVJwxuw_01_KOC-C" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#c987a2;color:white;padding:12px 22px;border-radius:25px;text-decoration:none;">Ver producto</a>
-    </article>
-
-    <article style="background:white;padding:25px;border:1px solid #f1dfe7;border-radius:15px;text-align:center;">
-      <p style="color:#bd9a73;font-size:12px;">06 · COMPLEMENTOS</p>
-      <h3>Medias térmicas negras</h3>
-      <p>Medias cálidas para los días fríos.</p>
-      <a href="https://onelink.shein.com/60/68as8pg2kz2a?ismg_ol=EZphXsHRICl_01_KOC-C" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#c987a2;color:white;padding:12px 22px;border-radius:25px;text-decoration:none;">Ver producto</a>
-    </article>
-
-    <article style="background:white;padding:25px;border:1px solid #f1dfe7;border-radius:15px;text-align:center;">
-      <p style="color:#bd9a73;font-size:12px;">07 · VESTIDOS</p>
-      <h3>Vestido midi crema</h3>
-      <p>Vestido de manga larga y cuello asimétrico.</p>
-      <a href="https://onelink.shein.com/60/68as6clqrbfn?ismg_ol=C0Ygkj4snXZ_01_KOC-C" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#c987a2;color:white;padding:12px 22px;border-radius:25px;text-decoration:none;">Ver producto</a>
-    </article>
-
-  </div>
-
-  <p style="text-align:center;color:#88747f;font-size:12px;margin-top:30px;">Algunos enlaces son de afiliada. Tu look podría recibir una comisión si realizas una compra, sin coste adicional para ti.</p>
-</section>
 </body>
 </html>
